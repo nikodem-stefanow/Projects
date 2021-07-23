@@ -1,0 +1,141 @@
+/*--------------------FONT IMPORT--------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/*--------------------GENERAL--------------------*/
+/* Variables */
+:root{
+    /* Primary */
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    /* Neutral */
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /* Background, heading, buttons */
+    --very-light-gray: hsl(0, 0%, 95%); /* Paragraphs */
+}
+
+/* HTMLElement */
+body{
+    Font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--very-light-gray);
+    background: var(--transparent-white);
+    padding: 50px 0;
+}
+
+/* Attribution */
+.attribution{
+    margin: 20px auto 20px;
+    color: hsl(179, 100%, 13%);
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
+
+/*--------------------CARD--------------------*/
+/* Card */
+.card{
+    width: 80%;
+    min-width: 300px;
+    max-width: 390px;
+    margin: auto;
+}
+
+.card:first-child{
+    background-color: var(--Bright-orange);
+    border-radius: 10px 10px 0 0;
+}
+
+.card:nth-child(2){
+    background-color: var(--Dark-cyan);
+}
+
+.card:nth-child(3){
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 0 10px 10px;
+}
+
+/* container */
+.container{
+    box-sizing: border-box;
+    width: 95%;
+    margin: auto;
+    padding: 10% 5% 10% 10%;
+}
+
+/* Card Title */
+.card-title h1{
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: var(--transparent-white);
+    margin: 30px 0;
+    font-size: 2.5rem;
+}
+
+/* Card description */
+.card-desc{
+    line-height: 1.7rem;
+}
+
+/* Button */
+.card-button .button-link{
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--transparent-white);
+    margin: 15% 0 15px;
+    padding: 15px 40px;
+    border: var(--transparent-white) 1px solid;
+    border-radius: 30px;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.card:first-child .card-button .button-link{
+    color: var(--Bright-orange);
+}
+
+.card:nth-child(2) .card-button .button-link{
+    color: var(--Dark-cyan);
+}
+
+.card:nth-child(3) .card-button .button-link{
+    color: var(--Very-dark-cyan);
+}
+
+.card .card-button .button-link:hover{
+    background: none;
+    color: var(--transparent-white);
+}
+
+/*--------------------MEDIA QUERIES--------------------*/
+@media screen and (min-width: 940px){
+    /* Main */
+    .main{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        max-width: 1170px;
+    }
+
+    /* Card */
+    .card{
+        max-width: 340px;
+        margin: 0;
+    }
+
+    .card:first-child{
+        border-radius: 10px 0 0 10px;
+    }
+
+    .card:nth-child(3){
+        border-radius: 0 10px 10px 0;
+    }
+
+    /* Button */
+    .card-button .button-link{
+        margin-top: 30%;
+    }
+}
